@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :group_id %>
-    <%= form.select("group_id", Group.all.collect {|s| [s.description, s.id]}, {include_blank: 'Selecione...'}) %>
+    <%= form.select("group_id", @group_options, {include_blank: 'Selecione...'}) %>
   </div>
 
   <div class="actions">
