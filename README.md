@@ -56,5 +56,17 @@ rails db:drop
 
 rails g scaffold ActivityRecord activity:references record_date:DateTime quantity:decimal
 
-
 //pluck: traz a lista, map: permite "editar" os objetos
+
+rails g controller dashboard index
+
+yarn add materialize@css@next
+
+Para adicionar o materialize na pipeline do projeto:
+no caminho: app/assets/javascript/application.js
+adicionar: //= require materialize-css/dist/js/materialize
+no caminho: app/assets/stylesheets/application.css
+adicionar: *= require materialize-css/dist/css/materialize
+
+
+Dashboard com meta e porcentagem atingida

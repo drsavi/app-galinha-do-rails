@@ -1,5 +1,11 @@
 class ActivityRecordsController < ApplicationController
   before_action :set_activity_record, only: %i[ show edit update destroy ]
+  before_action :set_activity_options, only: %i[ create new edit update ]
+
+  # GET /activities or /activities.json
+  def set_activity_options
+    @activity_options = Activity.all.pluck(:description, :id)
+  end
 
   # GET /activity_records or /activity_records.json
   def index

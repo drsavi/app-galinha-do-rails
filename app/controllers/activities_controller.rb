@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
   before_action :set_activity, only: %i[ show edit update destroy ]
   before_action :set_group_options, only: %i[ create new edit update ]
 
-  # GET /activities or /activities.json
+  # GET 
   def set_group_options
     @group_options = Group.all.pluck(:description, :id)
   end
