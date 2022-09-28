@@ -67,6 +67,3 @@ no caminho: app/assets/javascript/application.js
 adicionar: //= require materialize-css/dist/js/materialize
 no caminho: app/assets/stylesheets/application.css
 adicionar: *= require materialize-css/dist/css/materialize
-
-
-Dashboard com meta e porcentagem atingida
