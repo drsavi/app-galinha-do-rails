@@ -1,27 +1,12 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Metodologia Galinha:
+G - Gratidão
+A - Atividade Física
+L - Laser
+I - Inspiração
+N - Novidade
+H - Humildade 
+A - Alteridade
 
 C:\Users\debora_savi\Workspace\rails-ini
 cd .. 
@@ -60,10 +45,17 @@ rails g scaffold ActivityRecord activity:references record_date:DateTime quantit
 
 rails g controller dashboard index
 
-yarn add materialize@css@next
+yarn add materialize-css@next
+yarn add react-materialize
 
 Para adicionar o materialize na pipeline do projeto:
 no caminho: app/assets/javascript/application.js
 adicionar: //= require materialize-css/dist/js/materialize
 no caminho: app/assets/stylesheets/application.css
 adicionar: *= require materialize-css/dist/css/materialize
+
+yarn add jquery
+
+no caminho: app/assets/javascript/application.js
+adicionar: //= require jquery
+
