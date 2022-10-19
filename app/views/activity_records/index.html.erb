@@ -15,7 +15,7 @@
   <tbody>
     <% @activity_records.each do |activity_record| %>
       <tr>
-        <td><%= activity_record.activity %></td>
+        <td><%= activity_record.activity.description %></td>
         <td><%= activity_record.record_date %></td>
         <td><%= activity_record.quantity %></td>
         <td><%= link_to 'Show', activity_record %></td>

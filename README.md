@@ -59,3 +59,68 @@ yarn add jquery
 no caminho: app/assets/javascript/application.js
 adicionar: //= require jquery
 
+
+
+
+
+Instalando o devise
+
+No arquivo Gemfile, adicionar:
+gem 'devise'
+
+instalar: bundle install
+
+para instalar as dependências: rails generate devise:install
+
+1 - Em config/environments/development.rb adicionar a seguinte configuração:
+
+config.action_mailer.default_url_options = {host: 'localhost', port: 3000}
+
+2 - Ensure you have defined root_url to *something* in your config/routes.rb. Por exemplo: root to: "home#index"
+
+
+3 - Ensure you have flash messages in app/views/layouts/application.html.erb.
+    For example:
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    * Not required for API-only Applications *
+
+
+4 - You can copy Devise views (for customization) to your app by running:
+
+    rails g devise:views
+
+     * Not required *
+
+em config/initializers/devise.rb, descomentar e setar: config.scoped_views = true
+
+rails g devise User
+rails g devise Admin
+
+rails generate devise:views users
+rails generate devise:views admins
+
+rails db:migrate
+
+
+Gerando backoffice
+
+rails g controller users_backoffice/welcome index
+rails g controller users_backoffice
+
+Alterar os controller do welcome para herdar do users_backoffice e não mais de application
+Adicionar o layout ao novo controller
+
+rails g controller admins_backoffice/welcome index
+rails g controller admins_backoffice
+
+Alterar os controller do welcome para herdar do admins_backoffice e não mais de application
+Adicionar o layout ao novo controller
+
+Fazendo o Logoff apenas de 1 escopo por vez
+
+config.sign_out_all_scopes = false
+
+app/models/admin.rb configurações do devise

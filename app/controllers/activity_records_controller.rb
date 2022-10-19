@@ -1,4 +1,4 @@
-class ActivityRecordsController < ApplicationController
+class ActivityRecordsController < UsersBackofficeController
   before_action :set_activity_record, only: %i[ show edit update destroy ]
   before_action :set_activity_options, only: %i[ create new edit update ]
 

@@ -1,4 +1,7 @@
 class ActivitiesController < ApplicationController
+
+  http_basic_authenticate_with name: "usuario", password: "senha", except: :index
+  
   before_action :set_activity, only: %i[ show edit update destroy ]
   before_action :set_group_options, only: %i[ create new edit update ]
 
